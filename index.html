@@ -14,9 +14,13 @@
     </style>
 </head>
 <body>
-<div id="root" class="container">
-    <message title="I am the header" body="Lorem ipsum dolor sit amet."></message>
-    <message title="I am second message" body="Bla Bla Bla"></message>
+<div id="root">
+    <modal v-show="showModal" @close="showModal = false">
+        <p>
+            This is some random text
+        </p>
+    </modal>
+    <button @click="showModal = true">Show Modal</button>
 
 </div>
 
